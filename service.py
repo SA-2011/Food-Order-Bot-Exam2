@@ -8,7 +8,6 @@ async def clear_current_fsm(state):
     return True
 
 async def add_dish_to_cart(tg_id_of_user, dish_id, quantity):
-    con = None
     try:
         con = await connection()
         user_id = str(tg_id_of_user)
@@ -53,7 +52,6 @@ async def add_dish_to_cart(tg_id_of_user, dish_id, quantity):
             await con.close()
 
 async def get_cart_quantity(tg_id_of_user, dish_id):
-    con = None
     try:
         con = await connection()
         return await con.fetchval("""
@@ -69,7 +67,6 @@ async def get_cart_quantity(tg_id_of_user, dish_id):
             await con.close()
 
 async def decrease_dish_in_cart(tg_id_of_user, dish_id):
-    con = None
     try:
         con = await connection()
         user_id = str(tg_id_of_user)
@@ -107,7 +104,6 @@ async def decrease_dish_in_cart(tg_id_of_user, dish_id):
             await con.close()
 
 async def remove_dish_from_cart(tg_id_of_user, dish_id):
-    con = None
     try:
         con = await connection()
         status = await con.execute("""
@@ -149,7 +145,6 @@ async def show_all_dishes():
         await con.close()
 
 async def get_dish(dish_id):
-    con = None
     try:
         con = await connection()
         return await con.fetchrow(
