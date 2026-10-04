@@ -430,8 +430,7 @@ async def help(message: Message):
 
 ▶️ /start — Start the bot
 ➕ /add_dish — Add a new dish to the menu
-🍽️ /show_dishes — View all dishes in the menu
-🔎 /dish <id> — View a dish card
+🔎 /dish — View a dish card
 🛒 /show_cart — View your cart
 📊 /cart_stats — View cart portions and different dishes
 🗑️ /clear_cart — Clear your cart
@@ -452,8 +451,7 @@ async def help(message: Message):
 🚀 Available Commands
 
 ▶️ /start — Start the bot
-🍽️ /show_dishes — View all dishes in the menu
-🔎 /dish <id> — View a dish card
+🔎 /dish — View a dish card
 🛒 /show_cart — View your cart
 📊 /cart_stats — View cart portions and different dishes
 🗑️ /clear_cart — Clear your cart
